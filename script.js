@@ -67,12 +67,18 @@ cards.forEach((card) => { //arrow function
   })
 })
 
+
 function Pokemon(name, hp, type) {
   this.name = name;
   this.hp = hp;
   this.type = type;
 }
 
+//new object
 let newPokemon = new Pokemon("Mewtwo", 150, "Psychic")
+if (newPokemon.hp > this.hp) { //logic comparison
+  console.log(newPokemon.hp)
+}
+
 
 console.log(stats)
