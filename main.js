@@ -5,7 +5,7 @@ import {planets} from './assets/planets.js'
 let filmList = document.querySelector("#film-list");
 let planetList = document.querySelector("#planet-list")
 
-films.forEach((film) => {
+films.forEach((film) => { //loop thru array
     let listItem = document.createElement('li')
     listItem.textContent = film.title
     filmList.appendChild(listItem)
@@ -14,7 +14,7 @@ films.forEach((film) => {
 function getRandomPlanet() {
     var randomId =  Math.floor((Math.random()*planets.length))
     let planet = document.getElementById("planet");
-    planet.textContent = planets[randomId].name;
+    planet.textContent = planets[randomId].name; //dot notation
    // console.log(planet) testing
 }
 document.getElementById("mybutton").onclick = getRandomPlanet;

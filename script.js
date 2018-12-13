@@ -12,9 +12,11 @@ let pokepics = pokemon.map(function(p){
   let card = document.createElement("div")
 
   pic.src = p.imageUrl;
-  name.textContent = "Name: " + p.name
-  hp.textContent = "HP: " + p.hp
-  type.textContent = "Type: " + p.types
+
+  //template literals------------
+  name.textContent = `Name: ${p.name}`
+  hp.textContent = `HP: ${p.hp}`
+  type.textContent = `Type: ${p.types}`
 
   statList.appendChild(name)
   statList.appendChild(hp)
@@ -30,6 +32,7 @@ let pokepics = pokemon.map(function(p){
 
   return card
 })
+
 let cardList = document.getElementById("cardList")
 pokepics.forEach((pic) => {
   cardList.appendChild(pic)
@@ -58,12 +61,18 @@ cardButton.addEventListener('click', function() {
 })
 
 var cards = document.querySelectorAll('.card');
-cards.forEach((card) => {
+cards.forEach((card) => { //arrow function
   card.addEventListener('mouseover', function() {
     card.classList.toggle('is-flipped');
   })
 })
 
+function Pokemon(name, hp, type) {
+  this.name = name;
+  this.hp = hp;
+  this.type = type;
+}
 
+let newPokemon = new Pokemon("Mewtwo", 150, "Psychic")
 
 console.log(stats)

@@ -27,12 +27,13 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 30px;
+  font-size: 16px;
+  border-radius: 12px;
 }
-.button:hover {
+#mybutton:hover {
   background-color: lightgray;
   color: white;
-  font-size: 30px;
+  font-size: 16px;
 }
 /*
 #profile-link {
@@ -60,7 +61,8 @@ body {
   color: #fff;
   line-height: 250px;
   text-align: center;
-  background: #b3edff
+  background: #b3edff;
+  margin: 5px;
 }
 @media only screen and (max-width: 600px) {
   body {
@@ -96,4 +98,9 @@ footer {
   text-align: center;
   background-color: lightgray;
   padding: 25px;
+}
+#sw-list {
+  text-align: center;
+  background-color: #b3edff;
+  padding: 10px;
 }
